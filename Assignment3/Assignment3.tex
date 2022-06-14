@@ -1,0 +1,140 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+\setbeamertemplate{caption}[numbered]{}
+
+\usepackage{enumitem}
+\usepackage{tfrupee}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+
+\def\inputGnumericTable{}
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}
+\usepackage{caption} 
+\captionsetup[table]{skip=3pt}  
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\renewcommand{\thefigure}{\arabic{table}}
+\renewcommand{\thetable}{\arabic{table}}
+
+% Title page details: 
+\title{AI1110: Assignment 3} 
+\author{SRI CHARVI\\BT21BTECH11008}
+\date{\today}
+%\logo{\large \LaTeX{}}
+
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+%\logo{}
+
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Question}
+
+\textbf{a)} In the coin experiment, the space $S$ consists of the outcomes $h$ and $t$:
+
+\begin{center}
+$S=\{h,t\}$
+\end{center}
+
+
+  and it's events are the four sets \{\emptyset\}, \{t\}, \{h\}, S. 
+  
+  $P\{h\}=p$ and $P\{t\}=q$. Show that $p+q=1$\\
+  
+  \textbf{b)}We consider now the experiment of the toss of a coin three times. What is the probability of getting two heads in the first two tosses?
+\end{frame}
+\section{Solution (a)}
+\begin{frame}{Solution (a)}
+	The given coin is fair.
+	
+	We get either heads or tails for one toss.
+	
+	Number of possible outcomes = 2 
+	
+	Probability of getting heads is $P\{h\}=p$
+	
+	Probability of getting tails is $P\{t\}=q$
+	
+	Both events are exhaustive, mutually exclusive and equally probable.
+    \begin{align}
+            &\implies  P\{h\}=  P\{t\}= \dfrac{1}{2}\\
+            &\implies p=q=\dfrac{1}{2}
+    \end{align}
+    
+    \begin{align}
+        \therefore p+q &= \dfrac{1}{2}+\dfrac{1}{2}\\
+            &=1
+    \end{align}
+\end{frame}
+
+\section{Solution (b)}
+\begin{frame}{Solution (b)}
+    Let P(E) be the required probability
+    
+	The possible outcomes/events of this experiment(tossing the coin thrice) are:
+	\begin{center}
+	    $hhh$, $hht$, $hth$, $htt$, $thh$, $tht$, $tth$, $ttt$
+	\end{center}
+	
+	
+	In this case, the probability of each elementary event equals \dfrac{1}{8}.
+	
+	Thus the probability P $\{hhh\}$ that we get three heads equals \dfrac{1}{8}. The event
+	
+	\begin{equation}
+	   \{E\} = \{hhh, hht\}
+	\end{equation}
+	
+	consists of the two outcomes $hhh$ and $hht$.
+	
+	Hence the required probability is
+	\begin{align}
+	    P(E) &=  P \{hhh\} + P \{hht\}\\
+	        &= \dfrac{1}{8}+\dfrac{1}{8}\\
+	        &=2/8
+	\end{align}
+\end{frame}	
+	
+	
+
+\end{document}
