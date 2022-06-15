@@ -1,0 +1,95 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+\usepackage{amsmath}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cdf}[2]{\ensuremath{\text{F}_{#1}\left(#2\right)}}
+
+% Title page details: 
+\title{AI110:Assignment 4 } 
+\author{SRI CHARVI (BT21BTECH11008)}
+\date{\today}
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Problem}
+\begin{frame}{Problem Statement}
+
+\textbf{(Papoulis chap-12 - 12.4 )}
+Show that if a process is normal and distribution-ergodic as in (12-35), then it is also
+mean-ergodic.\\
+Defination from 12-35
+\begin{equation*}
+    \frac{1}{T}\int_{0}^{T}F(x,x:\tau)d\tau  \longrightarrow F^2(x)  
+\end{equation*}
+for T  \rightarrow \infty
+\end{frame}
+
+
+% Blocks frame
+\section{Solution}
+\begin{frame}{Solution}
+The process x(t) is normal and such that
+\begin{equation}
+    F(x,x:\tau) \longrightarrow F^2(x) 
+\end{equation}
+as \tau \rightarrow \infty\\
+We shall show that it is mean - ergodic. It suffices to show that
+\begin{equation*}
+    C(\tau) \rightarrow 0 \\ for \tau \rightarrow \infty
+\end{equation*}
+We are assuming that \eta=0 \\  C(0)=1
+\end{frame} 
+
+\begin{frame}
+
+\begin{equation}
+    f(x_{1},x_{2};\tau) = \frac{1}{2\pi\sqrt{1-r^2}}exp\left|-\frac{1}{2(1-r^2)}(x^2_{1}-2rx_{1}x_{2}+x^2_{2})\right|
+\end{equation}
+\begin{equation}
+   = \frac{1}{2\pi\sqrt{1-r^2}}exp\left|-\frac{1}{2(1-r^2)}(x_{1}-rx_{2})^2\right|e^{\frac{-x^2_{2}}{2}}
+\end{equation}
+Clearly, f(x,y) = f(y,x) , hence
+\begin{equation*}
+    F(x+dx, x+dx;\tau) - F(x,x,\tau) = 2\int_{-\infty}^{x}f(\epsilon,x)d{\epsilon}dx
+\end{equation*}
+\begin{equation}
+    =\frac{1}{\pi\sqrt{1-r^2}}\int_{-\infty}^{x}exp\left|-\frac{1}{2(1-r^2)}(\epsilon-rx)^2\right|d{\epsilon}e^{-x^2_{2}/2}dx
+\end{equation}
+\end{frame}
+\begin{frame}
+    further
+    \begin{equation*}
+        F^2(x+dx) - F^2(x) = 2F(x)f(x)dx
+    \end{equation*}
+    From above 1 it follows that
+    G\left\{ \frac{x-rx}{\sqrt{1-r^2}} \right\} \longrightarrow G(x)\\  for \tau \rightarrow \infty\\ Hence, r(\tau) \rightarrow 0 \\
+    as \tau \rightarrow \infty
+\end{frame}
+
+
+
+\end{document}
