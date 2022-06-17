@@ -1,0 +1,102 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+\usepackage{amsmath}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\cdf}[2]{\ensuremath{\text{F}_{#1}\left(#2\right)}}
+
+% Title page details: 
+\title{Assignment 5 } 
+\author{SRI CHARVI (BT21BTECH11008)}
+\date{\today}
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Problem}
+\begin{frame}{Problem Statement}
+
+\textbf{(Papoulis chap-12 - 12.1 )}
+Find the mean and variance of the random variable
+\begin{equation*}
+    n_{T} = \dfrac{1}{2T}\int_{-T}^{T}x(t)dt
+\end{equation*}
+\begin{equation*}
+  where x(t)=10+v(t)  
+\end{equation*}
+For T=5 and for T=100, assume
+\begin{equation*}
+    E[v(t)] = 0 
+\end{equation*}
+        \begin{equation*}
+            R_v(\tau) = 2\delta(\tau)
+        \end{equation*}                          
+
+\end{frame}
+
+
+% Blocks frame
+\section{Solution}
+\begin{frame}{Solution}
+\begin{equation}
+    x(t)=10+v(t) 
+\end{equation}
+\begin{equation}
+      R_v(\tau) = 2\delta(\tau)
+\end{equation}
+From question
+\begin{equation}
+     E[v(t)] = 0
+\end{equation}
+\begin{equation}
+    E(x(t)) = E( 10 + v(t) )
+    \end{equation}
+    
+\begin{equation}
+    E[n_{T}] = E[x_{T}] = 10
+\end{equation}
+\begin{equation}
+        C_{x}(\tau) = 2\delta(\tau)
+\end{equation}
+\end{frame} 
+
+\begin{frame}
+\begin{equation*}
+    \sigma^2_{n_{T}} = \frac{1}{2T}\int_{-T}^{T}C_{x}(\tau)(1 - \frac{\tau}{2T})dt
+\end{equation*}
+From equation 6
+\begin{equation*}
+    \frac{1}{2T}\int_{-T}^{T}C_{x}(\tau)(1 - \frac{\tau}{2T})dt = \frac{1}{2T}\int_{-T}^{T}2\delta(\tau)(1 - \frac{\tau}{2T})dt  
+\end{equation*}
+\begin{equation*}
+    \frac{1}{2T}\int_{-T}^{T}2\delta(\tau)(1 - \frac{\tau}{2T})dt = \frac{1}{T}
+\end{equation*}
+So variance \sigma^2 is $\dfrac{1}{T}$  
+\end{frame}
+
+
+
+
+\end{document}
