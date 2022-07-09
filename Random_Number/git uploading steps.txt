@@ -1,0 +1,3 @@
+git add .  // Whatever is in your current folder will be updated
+git commit -m "any fucking comment"
+git push // uploading stuff done sfter this command
