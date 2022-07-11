@@ -10,6 +10,7 @@ double **matmul(double **a, double **b, int m, int n, int p);
 double **transpose(double **a,  int m, int n);
 void uniform(char *str, int len);
 void gaussian(char *str, int len);
+void V_dist(char *str, int len);
 double mean(char *str);
 double vaer(char *str);
 //End function declaration
