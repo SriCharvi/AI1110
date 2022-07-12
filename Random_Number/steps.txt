@@ -1,3 +1,0 @@
-sudo apt install texlive-full -y
-
-sudo apt install texmaker -y
