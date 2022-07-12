@@ -1,4 +1,5 @@
-#Importing numpy, scipy, mpmath and pyplot
+#exp_cdf
+# #Importing numpy, scipy, mpmath and pyplot
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy
